@@ -1,4 +1,50 @@
-CM_Simditor
+Simditor
+官方：http://simditor.tower.im/
 
-为有渔项目定制
+这里的universal_version基于Simditor（v1.0.5）和carrierwave，是一个含有客户端图片上传功能的Rails通用版本。
+
+注：与turbolinks仍有兼容性问题
+
+可以在Rails（> 4.0.0）中这样使用Scott1743/simditor:
+
+添加到Gemfile
+
+  gem 'simditor', github: 'Scott1743/simditor', branch: 'universal_version'
+  bundle install
+
+拷贝迁移文件
+
+  rake railties:install:migrations
+  rake db:migrate
+  
+在application.rb中引入carrierwave
+
+  require 'carrierwave'
+
+在assets pipeline中分别引用
+
+js:
+  //= require simditor
+  //= require simditor/init
+
+styles:
+   *= require 'simditor'
+
+页面中加入
+
+  <%= f.text_area :content, simditor: true %>
+
+
+Simditor已经可以在页面中使用了
+
+
+初始化的simditor宽度为720px，可以这样初始化来控制初始宽度，例如设宽为800px
+
+  <%= f.text_area :content, simditor: 800 %>
+  
+也可以不通过引用simditor/init的方式来初始化Simditor，请使用官方的初始化方式：http://simditor.tower.im/tours/tour-usage.html
+   
+   
+  
+
 
