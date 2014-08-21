@@ -20,7 +20,7 @@ Scott1743/simditor-rails基于Simditor（v1.0.5）和carrierwave，Rails（> 3.2
 
 添加到Gemfile
 
-### 
+###
     gem 'simditor', github: 'Scott1743/simditor', branch: 'universal_version'
     bundle install
 
@@ -29,13 +29,16 @@ Scott1743/simditor-rails基于Simditor（v1.0.5）和carrierwave，Rails（> 3.2
 ###
     rake railties:install:migrations
     rake db:migrate
-  
+
 在application.rb中引入carrierwave
 
 ###
     require 'carrierwave'
 
+在 你的项目 routes.rb 引入
 
+###
+    mount Simditor::Engine, at: "/"
 
 ## 初始化示例
 
@@ -53,11 +56,11 @@ Scott1743/simditor-rails基于Simditor（v1.0.5）和carrierwave，Rails（> 3.2
 
 ###
     <%= f.text_area :content, simditor: true %>
- 
+
     or
-  
+
     <textarea simditor='true'></textarea>
-  
+
 
 Simditor已经可以在页面中使用了
 
@@ -65,13 +68,13 @@ Simditor已经可以在页面中使用了
 
 初始化的simditor宽度为720px，可以这样初始化来控制初始宽度，例如设宽为800px
 
-###  
+###
     <%= f.text_area :content, simditor: 800 %>
-  
+
 也可以不通过引用simditor/init的方式来初始化Simditor
 请使用官方的初始化方式：http://simditor.tower.im/tours/tour-usage.html
-   
-   
-  
+
+
+
 
 
