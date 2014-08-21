@@ -7,19 +7,22 @@ Simditor官方：http://simditor.tower.im/
 ----------------------------------
 
 
-## 说明
+说明
+---------------------------------
 
 基于Simditor（v1.0.5）和carrierwave，Rails（> 3.2.18）
 通用版是一个含有客户端图片上传功能、自动初始化、预设宽度的版本
 
-## 配置
+配置
+---------------------------------
 
 在Rails中这样使用simditor-rails:
 
-添加到Gemfile
+## 添加到Gemfile
 
-### gem 'simditor', github: 'Scott1743/simditor', branch: 'universal_version'
-    bundle install
+### 
+  gem 'simditor', github: 'Scott1743/simditor', branch: 'universal_version'
+  bundle install
 
 拷贝迁移文件
 
