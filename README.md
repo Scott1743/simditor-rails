@@ -3,8 +3,9 @@ simditor-rails
 
 
 
-Simditor官方：http://simditor.tower.im/
+Simditor官方：
 ----------------------------------
+http://simditor.tower.im/
 
 
 说明
