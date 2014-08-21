@@ -18,11 +18,11 @@ Simditor官方：http://simditor.tower.im/
 
 在Rails中这样使用simditor-rails:
 
-## 添加到Gemfile
+添加到Gemfile
 
 ### 
-  gem 'simditor', github: 'Scott1743/simditor', branch: 'universal_version'
-  bundle install
+    gem 'simditor', github: 'Scott1743/simditor', branch: 'universal_version'
+    bundle install
 
 拷贝迁移文件
 
