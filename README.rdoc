@@ -1,18 +1,22 @@
 ============================================================
-simditor-rails
+### simditor-rails
 ============================================================
 
+
+### Simditor
+
+### 官方：http://simditor.tower.im/
 ----------------------------------
-Simditor
 
-官方：http://simditor.tower.im/
-----------------------------------
 
-这里的universal_version基于Simditor（v1.0.5）和carrierwave，是一个含有客户端图片上传功能的Rails通用版本。
+### 说明
 
-注：与turbolinks仍有兼容性问题
+基于Simditor（v1.0.5）和carrierwave，Rails（> 3.2.18）
+通用版是一个含有客户端图片上传功能、自动初始化、预设宽度的版本
 
-可以在Rails（> 4.0.0）中这样使用Scott1743/simditor:
+### 配置
+
+在Rails中这样使用simditor-rails:
 
 添加到Gemfile
 
@@ -28,19 +32,27 @@ Simditor
 
   require 'carrierwave'
 
-在assets pipeline中分别引用
 
-js:
+
+##初始化示例
+
+可以在页面中直接引用，推荐使用Assets Pipeline方式:
+
+Js:
   //= require simditor
   //= require simditor/init
 
-styles:
+Styles:
    *= require 'simditor'
 
-页面中加入
+页面中使用：
 
   <%= f.text_area :content, simditor: true %>
 
+or
+  
+  <textarea simditor='true'></textarea>
+  
 
 Simditor已经可以在页面中使用了
 
@@ -49,7 +61,8 @@ Simditor已经可以在页面中使用了
 
   <%= f.text_area :content, simditor: 800 %>
   
-也可以不通过引用simditor/init的方式来初始化Simditor，请使用官方的初始化方式：http://simditor.tower.im/tours/tour-usage.html
+也可以不通过引用simditor/init的方式来初始化Simditor
+请使用官方的初始化方式：http://simditor.tower.im/tours/tour-usage.html
    
    
   
