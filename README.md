@@ -1,14 +1,9 @@
+simditor-rails
 ===========================
-## simditor-rails
-===========================
 
 
 
-
-
-## Simditor
-
-## 官方：http://simditor.tower.im/
+Simditor官方：http://simditor.tower.im/
 ----------------------------------
 
 
@@ -23,8 +18,8 @@
 
 添加到Gemfile
 
-  gem 'simditor', github: 'Scott1743/simditor', branch: 'universal_version'
-  bundle install
+### gem 'simditor', github: 'Scott1743/simditor', branch: 'universal_version'
+    bundle install
 
 拷贝迁移文件
 
