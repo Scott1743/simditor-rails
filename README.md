@@ -61,6 +61,7 @@ http://simditor.tower.im/
 
 Simditor已经可以在页面中使用了
 
+## 另
 
 初始化的simditor宽度为720px，可以这样初始化来控制初始宽度，例如设宽为800px
 
