@@ -8,10 +8,10 @@ Simditor官方：
 http://simditor.tower.im/
 
 
-说明
+simditor-rails
 ---------------------------------
 
-基于Simditor（v1.0.5）和carrierwave，Rails（> 3.2.18）
+Scott1743/simditor-rails基于Simditor（v1.0.5）和carrierwave，Rails（> 3.2.18）
 通用版是一个含有客户端图片上传功能、自动初始化、预设宽度的版本。
 
 ## 配置
@@ -61,7 +61,7 @@ http://simditor.tower.im/
 
 Simditor已经可以在页面中使用了
 
-## 另
+## 初始化说明
 
 初始化的simditor宽度为720px，可以这样初始化来控制初始宽度，例如设宽为800px
 
