@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+$(document).ready(function(){
   for(_i = 0;_i < $("textarea[simditor]").length; _i++){
     var simditor_value = $($("textarea[simditor]")[_i]).attr("simditor");
     new Simditor({
@@ -8,4 +8,4 @@ window.addEventListener('load', function(){
       width: simditor_value
     });
   };
-},false);
+});
