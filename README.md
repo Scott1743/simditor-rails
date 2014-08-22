@@ -93,9 +93,9 @@ Simditor已经可以在页面中使用了
 
 ## 注意
 
-1.如果你的demo使用turbolinks，请添加jquery.turbolinks解决刷新加载问题。
+1.如果你的demo使用turbolinks，请添加jquery.turbolinks解决刷新加载问题.
 
-2.Scott1743/simditor-rails只依赖carrierwave，uploader中如需要使用更多功能，请安其官方文档引入所需库
+2.Scott1743/simditor-rails只依赖carrierwave，uploader中如需要使用更多功能，请安其官方文档引入所需库.
 
 
 
