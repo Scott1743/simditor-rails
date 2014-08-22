@@ -40,7 +40,11 @@ Scott1743/simditor-rails基于[Simditor（v1.0.5）](http://simditor.tower.im/)�
 ###
     mount Simditor::Engine => '/simditor'
 
-（可选）自定义SimditorUploader，写法法参照[Carrierwave](https://github.com/carrierwaveuploader/carrierwave)请务必使用类名SimditorUploader。不创建该uploader或者类名不匹配，将使用默认uploader（SimditorDefaultUploader）。
+自定义SimditorUploader（可选）
+
+uploader写法法参照[Carrierwave](https://github.com/carrierwaveuploader/carrierwave)，请务必使用类名SimditorUploader
+
+不创建该uploader或者类名不匹配，将使用默认uploader（SimditorDefaultUploader）
 
 ###
     rails generate uploader Simditor
@@ -90,6 +94,7 @@ Simditor已经可以在页面中使用了
 ## 注意
 
 1.如果你的demo使用turbolinks，请添加jquery.turbolinks解决刷新加载问题。
+
 2.Scott1743/simditor-rails只依赖carrierwave，uploader中如需要使用更多功能，请安其官方文档引入所需库
 
 
