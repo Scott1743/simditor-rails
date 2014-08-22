@@ -6,8 +6,7 @@ class SimditorImage < ActiveRecord::Base
   rescue
     nil
   end
-  binding.pry
-  if (klass == 'class')
+  if (klass == 'Class')
   # if ((Object.defined?(SimditorUploader)) == 'constant')
     mount_uploader :image, SimditorUploader
   else
