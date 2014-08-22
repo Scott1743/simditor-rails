@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class SimditorUploader < CarrierWave::Uploader::Base
+class SimditorDefaultUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick

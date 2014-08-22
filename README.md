@@ -11,7 +11,7 @@ http://simditor.tower.im/
 simditor-rails
 ---------------------------------
 
-Scott1743/simditor-rails基于Simditor（v1.0.5）和carrierwave，Rails（> 3.2.18）
+Scott1743/simditor-rails基于[Simditor（v1.0.5）](http://simditor.tower.im/)和[Carrierwave](https://github.com/carrierwaveuploader/carrierwave)，Rails（> 3.2.18）
 通用版是一个含有客户端图片上传功能、自动初始化、预设宽度的版本。
 
 ## 配置
@@ -39,6 +39,18 @@ Scott1743/simditor-rails基于Simditor（v1.0.5）和carrierwave，Rails（> 3.2
 
 ###
     mount Simditor::Engine => '/simditor'
+
+（可选）自定义SimditorUploader，写法法参照[Carrierwave](https://github.com/carrierwaveuploader/carrierwave)请务必使用类名SimditorUploader。不创建该uploader或者类名不匹配，将使用默认uploader（SimditorDefaultUploader）。
+
+###
+    rails generate uploader Simditor
+
+    app/uploaders/simditor_uploader.rb >>
+
+    class SimditorUploader < CarrierWave::Uploader::Base
+    #注意uploader类名
+    #...
+
 
 ## 初始化示例
 
@@ -71,8 +83,15 @@ Simditor已经可以在页面中使用了
 ###
     <%= f.text_area :content, simditor: 800 %>
 
-也可以不通过引用simditor/init的方式来初始化Simditor
-请使用官方的初始化方式：http://simditor.tower.im/tours/tour-usage.html
+也可以不通过引用simditor/init的方式来初始化[Simditor](http://simditor.tower.im/)
+
+使用官方的初始化：http://simditor.tower.im/tours/tour-usage.html
+
+## 注意
+
+1.如果你的demo使用turbolinks，请添加jquery.turbolinks解决刷新加载问题。
+2.Scott1743/simditor-rails只依赖carrierwave，uploader中如需要使用更多功能，请安其官方文档引入所需库
+
 
 
 
