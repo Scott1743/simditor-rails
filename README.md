@@ -35,10 +35,10 @@ Scott1743/simditor-rails基于Simditor（v1.0.5）和carrierwave，Rails（> 3.2
 ###
     require 'carrierwave'
 
-在 你的项目 routes.rb 引入
+在Rails项目routes中引入
 
 ###
-    mount Simditor::Engine, at: "/"
+    mount Simditor::Engine => '/simditor'
 
 ## 初始化示例
 
