@@ -86,6 +86,10 @@ Simditor已经可以在页面中使用了
 
 ###
     <%= f.text_area :content, simditor: 800 %>
+    
+    or
+    
+    <%= f.text_area :content, simditor: '100%' %>
 
 也可以不通过引用simditor/init的方式来初始化[Simditor](http://simditor.tower.im/)
 
