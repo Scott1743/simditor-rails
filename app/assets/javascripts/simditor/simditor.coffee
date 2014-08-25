@@ -2970,6 +2970,7 @@ class ImageButton extends Button
       else
 
         $img.attr 'src', result.file_path
+        $img.css 'width', '100%'
 
       @popover.srcEl.prop('disabled', false)
 
