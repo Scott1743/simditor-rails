@@ -3182,6 +3182,7 @@ class ImagePopover extends Popover
       @srcEl.val '正在上传'
     else
       @srcEl.val $img.attr('src')
+      $img.css 'max-width', '100%'
 
 
 Simditor.Toolbar.addButton(ImageButton)
