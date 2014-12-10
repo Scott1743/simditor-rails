@@ -3,7 +3,7 @@ simditor-rails
 
 
 
-Simditor官方：
+Simditor：
 ----------------------------------
 http://simditor.tower.im/
 
@@ -11,40 +11,42 @@ http://simditor.tower.im/
 simditor-rails
 ---------------------------------
 
-Scott1743/simditor-rails基于[Simditor（v1.0.5）](http://simditor.tower.im/)和[Carrierwave](https://github.com/carrierwaveuploader/carrierwave)，Rails（> 3.2.18）
-通用版是一个含有客户端图片上传功能、自动初始化、预设宽度的版本。
+Scott1743/simditor-rails base on [Simditor(v1.0.5)](http://simditor.tower.im/) and [Carrierwave](https://github.com/carrierwaveuploader/carrierwave),Rails(> 3.2.18),
+the universal_version is a version that includes features of image uploader, automatic initialization, width preset.
 
-## 配置
+## Usage
 
-在Rails中这样使用simditor-rails:
+#### Use this gem in your Rails app like this:
 
-添加到Gemfile
+Add it to Gemfile:
 
 ###
     gem 'simditor', github: 'Scott1743/simditor', branch: 'universal_version'
     bundle install
 
-拷贝迁移文件
+Create the migration file:
 
 ###
     rake railties:install:migrations
     rake db:migrate
 
-在application.rb中引入carrierwave
+Require the relevance in 'application.rb':
 
 ###
     require 'carrierwave'
 
-在Rails项目routes中引入
+Mount this route to Rails routes:
 
 ###
     mount Simditor::Engine => '/simditor'
 
-自定义SimditorUploader（可选）
+Override the default uploader (optional):
 
-uploader写法法参照[Carrierwave](https://github.com/carrierwaveuploader/carrierwave)，请务必使用类名SimditorUploader
+If the name of your uploader is not 'SimditorUploader', the gem will use the default uploader (SimditorDefaultUploader).
+ 
+Of course, you needn't to create any uploader if you just want a demo.
 
-不创建该uploader或者类名不匹配，将使用默认uploader（SimditorDefaultUploader）
+Override the [Carrierwave](https://github.com/carrierwaveuploader/carrierwave) uploader:
 
 ###
     rails generate uploader Simditor
@@ -52,13 +54,12 @@ uploader写法法参照[Carrierwave](https://github.com/carrierwaveuploader/carr
     app/uploaders/simditor_uploader.rb >>
 
     class SimditorUploader < CarrierWave::Uploader::Base
-    #注意uploader类名
+    # Notice the class name
     #...
 
+## An example of initialization
 
-## 初始化示例
-
-可以在页面中直接引用，推荐使用Assets Pipeline方式:
+#### Use it with Assets Pipeline:
 
 ###
     Js:
@@ -68,7 +69,7 @@ uploader写法法参照[Carrierwave](https://github.com/carrierwaveuploader/carr
     Styles:
     *= require 'simditor'
 
-页面中使用：
+In your page：
 
 ###
     <%= f.text_area :content, simditor: true %>
@@ -78,11 +79,11 @@ uploader写法法参照[Carrierwave](https://github.com/carrierwaveuploader/carr
     <textarea simditor='true'></textarea>
 
 
-Simditor已经可以在页面中使用了
+Now, Simditor could be worked.
 
-## 初始化说明
+## About initialization
 
-初始化的simditor宽度为720px，可以这样初始化来控制初始宽度，例如设宽为800px
+The initialized width of Simditor is 720px, and you can set the initialized width in this way:
 
 ###
     <%= f.text_area :content, simditor: 800 %>
@@ -91,15 +92,13 @@ Simditor已经可以在页面中使用了
     
     <%= f.text_area :content, simditor: '100%' %>
 
-也可以不通过引用simditor/init的方式来初始化[Simditor](http://simditor.tower.im/)
+You can initialize [Simditor](http://simditor.tower.im/) without requiring 'simditor/init', then also can initialize it with original way: http://simditor.tower.im/tours/tour-usage.html.
 
-使用官方的初始化：http://simditor.tower.im/tours/tour-usage.html
+## Notice
 
-## 注意
+1. If you use this gem with Turbolinks, please add the gem [jquery.turbolinks](https://github.com/kossnocorp/jquery.turbolinks)
 
-1.如果你的demo使用turbolinks，请添加jquery.turbolinks解决刷新加载问题.
-
-2.Scott1743/simditor-rails只依赖carrierwave，uploader中如需要使用更多功能，请按其官方文档引入所需库.
+2. Scott1743/simditor-rails only depends on the [Carrierwave](https://github.com/carrierwaveuploader/carrierwave), if you need more features of the uploader, please refer to documents of [Carrierwave](https://github.com/carrierwaveuploader/carrierwave). 
 
 
 
